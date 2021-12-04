@@ -1,0 +1,16 @@
+{
+    "python.autoComplete.extraPaths": [
+        "/home/rake/dp_ws/devel/lib/python3/dist-packages",
+        "/home/rake/sampleproject_ws/devel/lib/python3/dist-packages",
+        "/home/rake/catkin_ws/devel/lib/python3/dist-packages",
+        "/home/rake/ws_moveit/devel/lib/python3/dist-packages",
+        "/opt/ros/noetic/lib/python3/dist-packages"
+    ],
+    "python.analysis.extraPaths": [
+        "/home/rake/dp_ws/devel/lib/python3/dist-packages",
+        "/home/rake/sampleproject_ws/devel/lib/python3/dist-packages",
+        "/home/rake/catkin_ws/devel/lib/python3/dist-packages",
+        "/home/rake/ws_moveit/devel/lib/python3/dist-packages",
+        "/opt/ros/noetic/lib/python3/dist-packages"
+    ]
+}

@@ -1,0 +1,57 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "",
+        "limitSymbolsToIncludedHeaders": true
+      },
+      "includePath": [
+        "/home/rake/dp_ws/devel/include/**",
+        "/home/rake/sampleproject_ws/devel/include/**",
+        "/home/rake/catkin_ws/devel/include/**",
+        "/home/rake/ws_moveit/devel/include/**",
+        "/opt/ros/noetic/include/**",
+        "/home/rake/ws_moveit/src/moveit/moveit_planners/chomp/chomp_motion_planner/include/**",
+        "/home/rake/ws_moveit/src/eigenpy/include/**",
+        "/home/rake/catkin_ws/src/pr2_controllers/ethercat_trigger_controllers/include/**",
+        "/home/rake/ws_moveit/src/geometric_shapes/include/**",
+        "/home/rake/ws_moveit/src/moveit/moveit_planners/chomp/chomp_interface/include/**",
+        "/home/rake/ws_moveit/src/moveit_resources/prbt_ikfast_manipulator_plugin/include/**",
+        "/home/rake/ws_moveit/src/moveit/moveit_ros/benchmarks/include/**",
+        "/home/rake/ws_moveit/src/moveit/moveit_plugins/moveit_ros_control_interface/include/**",
+        "/home/rake/ws_moveit/src/moveit/moveit_ros/move_group/include/**",
+        "/home/rake/ws_moveit/src/moveit/moveit_ros/occupancy_map_monitor/include/**",
+        "/home/rake/ws_moveit/src/moveit/moveit_ros/robot_interaction/include/**",
+        "/home/rake/ws_moveit/src/moveit/moveit_ros/moveit_servo/include/**",
+        "/home/rake/ws_moveit/src/moveit/moveit_setup_assistant/include/**",
+        "/home/rake/ws_moveit/src/moveit/moveit_plugins/moveit_simple_controller_manager/include/**",
+        "/home/rake/ws_moveit/src/moveit_visual_tools/include/**",
+        "/home/rake/sampleproject_ws/src/my_controller_pkg/include/**",
+        "/home/rake/dp_ws/src/notspot_sim_cpp/src/notspot_controller/include/**",
+        "/home/rake/dp_ws/src/notspot_sim_cpp/src/notspot_joystick/include/**",
+        "/home/rake/ws_moveit/src/moveit/moveit_planners/pilz_industrial_motion_planner/include/**",
+        "/home/rake/ws_moveit/src/moveit/moveit_planners/pilz_industrial_motion_planner_testutils/include/**",
+        "/home/rake/catkin_ws/src/pr2_controllers/pr2_calibration_controllers/include/**",
+        "/home/rake/catkin_ws/src/pr2_mechanism/pr2_controller_interface/include/**",
+        "/home/rake/catkin_ws/src/pr2_mechanism/pr2_controller_manager/include/**",
+        "/home/rake/sampleproject_ws/src/pr2_simulator/pr2_gazebo_plugins/include/**",
+        "/home/rake/catkin_ws/src/pr2_mechanism/pr2_hardware_interface/include/**",
+        "/home/rake/catkin_ws/src/pr2_controllers/pr2_mechanism_controllers/include/**",
+        "/home/rake/catkin_ws/src/pr2_mechanism/pr2_mechanism_diagnostics/include/**",
+        "/home/rake/catkin_ws/src/pr2_mechanism/pr2_mechanism_model/include/**",
+        "/home/rake/catkin_ws/src/pr2_controllers/robot_mechanism_controllers/include/**",
+        "/home/rake/ws_moveit/src/rosparam_shortcuts/include/**",
+        "/home/rake/catkin_ws/src/rosserial/rosserial_server/include/**",
+        "/home/rake/catkin_ws/src/rosserial/rosserial_test/include/**",
+        "/home/rake/ws_moveit/src/rviz_visual_tools/include/**",
+        "/home/rake/catkin_ws/src/turtlebot3_simulations/turtlebot3_fake/include/**",
+        "/home/rake/catkin_ws/src/turtlebot3_simulations/turtlebot3_gazebo/include/**",
+        "/home/rake/catkin_ws/src/turtlebot3-master/turtlebot3_slam/include/**",
+        "/home/rake/ws_moveit/src/warehouse_ros/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS"
+    }
+  ],
+  "version": 4
+}
