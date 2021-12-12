@@ -26,7 +26,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://MYMOBI/meshes/base_link.STL" />
+          filename="package://mymobi_design/meshes/base_link.STL" />
       </geometry>
       <material
         name="">
@@ -40,7 +40,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://MYMOBI/meshes/base_link.STL" />
+          filename="package://mymobi_design/meshes/base_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -66,7 +66,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://MYMOBI/meshes/r_wheel.STL" />
+          filename="package://mymobi_design/meshes/r_wheel.STL" />
       </geometry>
       <material
         name="">
@@ -80,7 +80,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://MYMOBI/meshes/r_wheel.STL" />
+          filename="package://mymobi_design/meshes/r_wheel.STL" />
       </geometry>
     </collision>
   </link>
@@ -122,7 +122,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://MYMOBI/meshes/l_wheel.STL" />
+          filename="package://mymobi_design/meshes/l_wheel.STL" />
       </geometry>
       <material
         name="">
@@ -136,7 +136,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://MYMOBI/meshes/l_wheel.STL" />
+          filename="package://mymobi_design/meshes/l_wheel.STL" />
       </geometry>
     </collision>
   </link>
@@ -178,7 +178,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://MYMOBI/meshes/b_castor.STL" />
+          filename="package://mymobi_design/meshes/b_castor.STL" />
       </geometry>
       <material
         name="">
@@ -192,7 +192,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://MYMOBI/meshes/b_castor.STL" />
+          filename="package://mymobi_design/meshes/b_castor.STL" />
       </geometry>
     </collision>
   </link>
@@ -231,7 +231,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://MYMOBI/meshes/f_castor.STL" />
+          filename="package://mymobi_design/meshes/f_castor.STL" />
       </geometry>
       <material
         name="">
@@ -245,7 +245,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://MYMOBI/meshes/f_castor.STL" />
+          filename="package://mymobi_design/meshes/f_castor.STL" />
       </geometry>
     </collision>
   </link>
@@ -262,4 +262,25 @@
     <axis
       xyz="0.34113 0.32311 0.88274" />
   </joint>
+  
+  
+  
+    <gazebo>
+    <plugin name="differential_drive_controller" filename="libgazebo_ros_diff_drive.so">
+      <legacyMode>false</legacyMode>
+      <alwaysOn>true</alwaysOn>
+      <updateRate>20</updateRate>
+      <leftJoint>l_wheel_joint</leftJoint>
+      <rightJoint>r_wheel_joint</rightJoint>
+      <wheelSeparation>0.4</wheelSeparation>
+      <wheelDiameter>0.1</wheelDiameter>
+      <torque>20</torque>
+      <commandTopic>cmd_vel</commandTopic>
+      <odometryTopic>odom</odometryTopic>
+      <odometryFrame>odom</odometryFrame>
+      <robotBaseFrame>base_link</robotBaseFrame>
+    </plugin>
+  </gazebo>
+  
+  
 </robot>
