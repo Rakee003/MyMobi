@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+
+
+
+
+
+  <robot name="MYMOBI" xmlns:xacro="http://ros.org/wiki/xacro">
+
+	<!-- Defining the colors used in this robot -->
+  <material name="Black">
+    <color rgba="0.0 0.0 0.0 1.0"/>
+  </material>
+
+  <material name="Red">
+    <color rgba="0.8 0.0 0.0 1.0"/>
+  </material>
+
+  <material name="White">
+    <color rgba="1.0 1.0 1.0 1.0"/>
+  </material>
+
+
+  <material name="Blue">
+    <color rgba="0.0 0.0 0.8 1.0"/>
+  </material>
+
+  <!-- Hokuyo Laser scanner -->
+  <xacro:property name="hokuyo_size" value="0.01" />
+
+
+  <!-- Main body radius and height -->
+  <!-- Main Body Cylinder base   -->
+  <xacro:property name="base_height" value="0.02" /> 
+  <xacro:property name="base_radius" value="0.15" /> 
+  <xacro:property name="base_mass" value="0.05" /> <!-- in kg-->
+
+
+
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.000540669794453349 0.00304620337803254 0.0482051615163406"
+        rpy="0 0 0" />
+      <mass
+        value="0.196289115232373" />
+      <inertia
+        ixx="0.000121937292020445"
+        ixy="-4.03631657525914E-08"
+        ixz="-4.19170996555954E-09"
+        iyy="0.000133131981812718"
+        iyz="-5.40346437782221E-07"
+        izz="0.000173108931361185" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mymobi_design/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mymobi_design/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="r_wheel">
+    <inertial>
+      <origin
+        xyz="-0.00243997670358728 1.30704219192604E-07 2.5348140631847E-07"
+        rpy="0 0 0" />
+      <mass
+        value="0.02973413929379" />
+      <inertia
+        ixx="2.0378833583153E-05"
+        ixy="4.09034210666274E-11"
+        ixz="7.97625788236576E-11"
+        iyy="1.22912881284281E-05"
+        iyz="-1.6026121487258E-10"
+        izz="1.2291134962144E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mymobi_design/meshes/r_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.298039215686275 0.298039215686275 0.298039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mymobi_design/meshes/r_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="r_wheel_joint"
+    type="continuous">
+    <origin
+      xyz="0.070359 0 0.015"
+      rpy="1.5708 0 3.1416" />
+    <parent
+      link="base_link" />
+    <child
+      link="r_wheel" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      effort="100"
+      velocity="100" />
+  </joint>
+  <link
+    name="l_wheel">
+    <inertial>
+      <origin
+        xyz="0.00243997670358714 2.11240250985734E-10 -2.85195323052913E-07"
+        rpy="0 0 0" />
+      <mass
+        value="0.029734139293791" />
+      <inertia
+        ixx="2.03788335831536E-05"
+        ixy="1.33639528871799E-13"
+        ixz="8.96389478573439E-11"
+        iyy="1.22913864722038E-05"
+        iyz="3.08092263833764E-11"
+        izz="1.22910366183691E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mymobi_design/meshes/l_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.298039215686275 0.298039215686275 0.298039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mymobi_design/meshes/l_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="l_wheel_joint"
+    type="continuous">
+    <origin
+      xyz="-0.070359 0 0.015"
+      rpy="2.0461 0 -3.1416" />
+    <parent
+      link="base_link" />
+    <child
+      link="l_wheel" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      effort="100"
+      velocity="100" />
+  </joint>
+  <link
+    name="b_castor">
+    <inertial>
+      <origin
+        xyz="-0.00272904725448559 -0.00258491327360974 -0.00706190657334837"
+        rpy="0 0 0" />
+      <mass
+        value="0.0280126392142641" />
+      <inertia
+        ixx="1.01125627563493E-06"
+        ixy="0"
+        ixz="-1.32348898008484E-23"
+        iyy="1.01125627563493E-06"
+        iyz="3.30872245021211E-23"
+        izz="1.01125627563493E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mymobi_design/meshes/b_castor.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.63921568627451 0.666666666666667 0.67843137254902 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mymobi_design/meshes/b_castor.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="b_castor_joint"
+    type="continuous">
+    <origin
+      xyz="0 -0.052 0"
+      rpy="0.35089 -0.34812 -0.91974" />
+    <parent
+      link="base_link" />
+    <child
+      link="b_castor" />
+    <axis
+      xyz="0.34113 0.32311 0.88274" />
+  </joint>
+  <link
+    name="f_castor">
+    <inertial>
+      <origin
+        xyz="-0.0027290472544856 -0.00258491327360973 -0.00706190657334837"
+        rpy="0 0 0" />
+      <mass
+        value="0.0280126392142641" />
+      <inertia
+        ixx="1.01125627563493E-06"
+        ixy="0"
+        ixz="-1.32348898008484E-23"
+        iyy="1.01125627563493E-06"
+        iyz="3.30872245021211E-23"
+        izz="1.01125627563493E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mymobi_design/meshes/f_castor.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.63921568627451 0.666666666666667 0.67843137254902 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mymobi_design/meshes/f_castor.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="f_castor_joint"
+    type="continuous">
+    <origin
+      xyz="0 0.052 0"
+      rpy="0.35089 -0.34812 -0.91974" />
+    <parent
+      link="base_link" />
+    <child
+      link="f_castor" />
+    <axis
+      xyz="0.34113 0.32311 0.88274" />
+  </joint>
+  
+  
+  
+    <gazebo>
+    <plugin name="differential_drive_controller" filename="libgazebo_ros_diff_drive.so">
+      <legacyMode>false</legacyMode>
+      <alwaysOn>true</alwaysOn>
+      <updateRate>20</updateRate>
+      <leftJoint>l_wheel_joint</leftJoint>
+      <rightJoint>r_wheel_joint</rightJoint>
+      <wheelSeparation>0.4</wheelSeparation>
+      <wheelDiameter>0.1</wheelDiameter>
+      <torque>20</torque>
+      <commandTopic>cmd_vel</commandTopic>
+      <odometryTopic>odom</odometryTopic>
+      <odometryFrame>odom</odometryFrame>
+      <robotBaseFrame>base_link</robotBaseFrame>
+    </plugin>
+  </gazebo>
+
+  
+
+
+
+
+  <link name="laser_link">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="${hokuyo_size} ${hokuyo_size} ${hokuyo_size}"/>
+      </geometry>
+      <material name="Blue" />
+    </visual>
+  </link>
+  <joint name="hokuyo_joint" type="fixed">
+    <origin xyz="${base_radius - hokuyo_size/2} 0 ${base_height+hokuyo_size/4}" rpy="0 0 0" />
+    <parent link="base_link"/>
+    <child link="laser_link" />
+  </joint>
+  <gazebo reference="laser_link">
+    <material>Gazebo/Blue</material>
+    <turnGravityOff>false</turnGravityOff>
+    <sensor type="ray" name="head_hokuyo_sensor">
+      <pose>${hokuyo_size/2} 0 0 0 0 0</pose>
+      <visualize>true</visualize>
+      <update_rate>40</update_rate>
+      <ray>
+        <scan>
+          <horizontal>
+            <samples>720</samples>
+            <resolution>1</resolution>
+            <min_angle>-1.570796</min_angle>
+            <max_angle>1.570796</max_angle>
+          </horizontal>
+        </scan>
+        <range>
+          <min>0.10</min>
+          <max>10.0</max>
+          <resolution>0.001</resolution>
+        </range>
+      </ray>
+      <plugin name="gazebo_ros_head_hokuyo_controller" filename="libgazebo_ros_laser.so">
+        <topicName>/scan</topicName>
+        <frameName>laser_link</frameName>
+      </plugin>
+    </sensor>
+  </gazebo>
+  
+
+
+</robot>
