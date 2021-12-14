@@ -321,7 +321,6 @@
 
 
 
-
   <link name="laser_link">
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
